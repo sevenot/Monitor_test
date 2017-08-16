@@ -40,3 +40,5 @@ echo -e "\033[1;35mSystem running status: \033[0m"
 #check logged in users
 	echo -e "\033[32mThe logged in users :\033[0m"
 	echo -e "\033[36m$(who)\033[0m"
+#check system memory
+	echo -e "\033[32mThe total memory : $(free -h | grep Mem | awk '{print $2}')\nThe used memory : $(free -h | grep Mem | awk '{print $3}')\033[0m"
