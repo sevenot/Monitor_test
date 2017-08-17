@@ -11,7 +11,7 @@ declare -i num=0
 declare -a Arr
 for i in $(ls . | grep .sh | grep -v main)
 	do
-		echo -e "\033[32m$num ==> $i: \033[34m$(sed -n '2p' $i)\033[0m"
+		echo -e "\033[32m$num ==> $i : \033[34m$(sed -n '2p' $i | cut -d "#" -f 2)\033[0m"
 		Arr[$num]=$i
 		num=$(($num+1))
 	done
@@ -32,10 +32,5 @@ for i in $(ls . | grep .sh | grep -v main)
 			fi
 		done
 
-
-
-	echo
-	echo
-	echo
 	echo "###################################################################################"
 done
