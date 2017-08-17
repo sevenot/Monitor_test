@@ -28,7 +28,7 @@ echo -e "\033[1;35mSystem running status: \033[0m"
 				then
 					echo -e  "\033[32mThe network status is good!\033[0m"
 			else
-				echo -e "\033[31mThe network  status is bad!\033[0m"
+				echo -e "\033[31mThe network  status is bad!(The network delay more than 4ms )\033[0m"
 			fi
 		;;
 		*)
@@ -42,7 +42,7 @@ echo -e "\033[1;35mSystem running status: \033[0m"
 	echo -e "\033[34m$(who)\033[0m"
 #check system memory
 	echo -e "\033[32mThe total memory : \033[34m$(free -h | grep Mem | awk '{print $2}')\033[0m"
-	echo -e "\033[32mThe total memory : \033[34m$(free -h | grep Mem | awk '{print $3}')\033[0m"
+	echo -e "\033[32mThe used memory : \033[34m$(free -h | grep Mem | awk '{print $3}')\033[0m"
 #check CPU status
 	echo -e "\033[32mThe free CPU percent : \033[34m$(top -n 1 | grep Cpu | awk '{printf $8}')%\033[0m"
 #check Hard Disk status
