@@ -28,7 +28,7 @@ for i in $(ls . | grep .sh | grep -v main)
 		do
 			if [ $cho == $i ]
 				then
-					bash $(pwd)/${Arr[i]}
+					./${Arr[$i]}
 			fi
 		done
 	echo "###################################################################################"
