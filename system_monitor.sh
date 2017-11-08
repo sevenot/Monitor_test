@@ -1,5 +1,5 @@
 #!/bin/bash
-#系统信息监控脚本
+#The system base information monitor script
 echo -e "\033[1;35mSystem running status: \033[0m"
 
 #check OS type

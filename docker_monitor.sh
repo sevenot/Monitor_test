@@ -1,5 +1,5 @@
 #!/bin/bash
-#docker状态监控脚本
+#docker status monitor script
 	echo -e "\033[1;31mDocker containers status:\033[0m"
 
 #total containers
